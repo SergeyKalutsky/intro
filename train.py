@@ -1,6 +1,7 @@
 import torch
 from torchvision import datasets, transforms
 from tqdm import tqdm
+import torch.nn.functional as F
 
 
 def train(model, device, train_loader, optimizer, epoch):
