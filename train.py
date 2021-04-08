@@ -29,7 +29,7 @@ def test(model, device, test_loader):
 
     test_loss /= len(test_loader.dataset)
 
-    print('\n Тренировочные данные: Средняя точность: {}/{} ({:.0f}%)\n'.format(
+    print('\nСредняя точность: {}/{} ({:.0f}%)\n'.format(
         correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
 
