@@ -28,10 +28,10 @@ def test(model, device, test_loader):
             correct += pred.eq(target.view_as(pred)).sum().item()
 
     test_loss /= len(test_loader.dataset)
-
-    print('\nСредняя точность: {}/{} ({:.0f}%)\n'.format(
-        correct, len(test_loader.dataset),
-        100. * correct / len(test_loader.dataset)))
+    all_data = len(test_loader.dataset)
+    percent_correct = 100. * correct / len(test_loader.dataset)
+    print(f'\nСредняя точность: {correct}/{all_data} ({percent_correct}%)')
+    print(f'\nСреднее значение функции потерь: {test_loss}')
 
 
 def get_data_loaders():
